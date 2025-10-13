@@ -16,14 +16,12 @@
                 <h1 class="year-heading-homepage">Updates</h1>
                 <p>{{ .Site.Params.profileUpdates | markdownify }}</p>
             </div>
-            {{ $posts := where site.RegularPages "Type" "posts" }}
-            {{ $recentPosts := first 5 ($posts.ByDate.Reverse)}}
-            <!-- Group posts by year -->
-            {{ range (where site.RegularPages "Type" "posts").GroupByDate "2006" }}
+      {{ $posts := where site.RegularPages "Type" "posts" }}
+      {{ range ($posts.ByDate.Reverse).GroupByDate "2006" }}
             <div class="year-group">
                 <h1 class="year-heading-homepage">{{ .Key }}</h1> <!-- Year -->
                 <ul class="post-list-homepage">
-                    {{ range $recentPosts }}
+                    {{ range first 5 .Pages }}
                     <li class="post-item-homepage">
                         <span class = "post-title-homepage">
                             <a href="{{ .RelPermalink }}" class="post-title-homepage-link">{{ .Title }}</a>
