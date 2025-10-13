@@ -126,6 +126,16 @@ theme = 'drishtikon'
     cv = "/path-to-your-cv"
     math = true
 
+    # Uncomment if you want to customize the colors
+    # backgroundColor = "#f9dc90"
+    # linksColor = "#805690"
+    # textColor = "#333"
+    # fontFamily = "Inter"
+    # tableHeaderColor = "#d46f93"
+    # tableContentColor = "#f89e9d"
+    # tableRowHoverColor = "#ffbbba"
+    # writingCardBackground = "#fdf1cd"    
+
 [menu]
     [[menu.main]]
         name = "posts"

@@ -4,6 +4,18 @@
     <title>{{ .Title }} | {{ .Site.Title }}</title>
     <link rel="icon" href="{{ .Site.Params.logo | default "data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%2210 0 100 100%22><text y=%22.90em%22 font-size=%2290%22>🪴</text></svg>"}}"></link>
     <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        :root {
+            --background-color: {{ .Site.Params.backgroundColor | default "#f9dc90" }};
+            --links-color: {{ .Site.Params.linksColor | default "#805690" }};
+            --text-color: {{ .Site.Params.textColor | default "#333" }};
+            --table-header-color: {{ .Site.Params.tableHeaderColor | default "#d46f93" }};
+            --table-content-color: {{ .Site.Params.tableContentColor | default "#f89e9d" }};
+            --table-row-hover-color: {{ .Site.Params.tableRowHoverColor | default "#ffbbba" }};
+            --writing-card-background: {{ .Site.Params.writingCardBackground | default "#fdf1cd" }};
+            --font-family: {{ .Site.Params.fontFamily | default "Inter" }};
+        }
+    </style>
     <link rel="preload" href="https://rsms.me/">
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
 

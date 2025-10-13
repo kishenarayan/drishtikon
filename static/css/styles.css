@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+:root {
+  --icon-size: 30px;
+}
+
 h1 {
     font-size: 40px;
 }
@@ -19,9 +23,9 @@ h3 {
 
 body {
     line-height: 1.6;
-    color: #333;
-    background-color: #f9dc90;
-    font-family: 'Inter';
+    color: var(--text-color);
+    background-color: var(--background-color);
+    font-family: var(--font-family);
     font-weight: 600;
 
 }
@@ -30,7 +34,7 @@ a {
     text-decoration: none !important;
     opacity: 0.7;
     transition: background-size 0.3s ease;
-    color: #805690;
+    color: var(--links-color);
 }
 
 a.site-title{
@@ -54,7 +58,7 @@ a:hover {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background-color: #f9dc90;
+    background-color: var(--background-color);
     margin-bottom: 1rem;
     padding-bottom: 1rem;
     top: 0px;
@@ -90,9 +94,9 @@ a:hover {
 }
 
 blockquote {
-  border-left: 10px solid #d46f93;
+  border-left: 10px solid var(--table-header-color);
   padding: 1em;
-  background: #f89e9d;
+  background: var(--table-content-color);
 }
 
 @media (max-width: 400px) {
@@ -116,7 +120,7 @@ blockquote {
 
 .nav-links a {
     text-decoration: none;
-    color: #292929;
+    color: var(--text-color);
     opacity: 0.7;
     font-weight: 600;
     transition: background-size 0.3s ease;
@@ -154,7 +158,7 @@ blockquote {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #f9dc90;
+  background-color: var(--background-color);
   max-width: 100%;
 }
 
@@ -208,7 +212,7 @@ blockquote {
 
 .year-heading-homepage {
   margin: 0rem 0 0rem;
-  color: #333;
+  color: var(--text-color);
 
 }
 
@@ -235,7 +239,7 @@ blockquote {
 
 .post-title-homepage-link {
   flex-grow: 1;
-  color: #292929;
+  color: var(--text-color);
   text-decoration: none;
   opacity: 0.8;
   transition: background-size 0.3s ease;
@@ -247,17 +251,17 @@ blockquote {
 
 .post-date-homepage {
   white-space: nowrap;
-  color: #292929;
+  color: var(--text-color);
   opacity: 0.75;
 
 }
 .dot-leader {
-    border-bottom: 4px dotted #000000;
+    border-bottom: 4px dotted var(--text-color);
     flex-grow: 1;
     height: 1.45rem;
     margin-left: 10px;
     margin-right: 10px;
-    color: #292929;
+    color: var(--text-color);
     opacity: 0.7;
 }
 
@@ -265,7 +269,7 @@ blockquote {
      text-align: right;
 }
 .all-posts-link-homepage a{
-     color: #805690;
+     color: var(--links-color);
      opacity: 0.7;
      text-decoration: none;
      transition: background-size 0.3s ease;
@@ -313,7 +317,7 @@ blockquote {
 
 .year-group  {
   margin: 0rem auto;
-  color: #333;
+  color: var(--text-color);
 }
 
 .post-list {
@@ -329,7 +333,7 @@ blockquote {
 
 .post-title {
   flex-grow: 1;
-  color: #292929;
+  color: var(--text-color);
   text-decoration: none;
   opacity: 0.8;
   transition: background-size 0.3s ease;
@@ -341,7 +345,7 @@ blockquote {
 }
 
 .post-date {
-  color: #292929;
+  color: var(--text-color);
   white-space: nowrap;
   opacity: 0.75;
 }
@@ -397,7 +401,7 @@ blockquote {
 }
 
 .post-meta {
-  color: #666;
+  color: color-mix(in srgb, var(--text-color) 66%, transparent);
 }
 
 .post-content {
@@ -411,11 +415,11 @@ blockquote {
 }
 
 .post-content li {
-    background: #f9dc90;
+    background: var(--background-color);
 }
 .post-content ul,
 .post-content ol {
-    background: #f9dc90;
+    background: var(--background-color);
     padding-left: 2rem;
 
 }
@@ -439,11 +443,11 @@ body .post-content table {
 .post-content td {
   padding: 0.5rem;
   text-align: center;
-  background-color: #f89e9d;
+  background-color: var(--table-content-color);
 }
 
 .post-content tr:hover td {
-  background-color: #ffbbba;
+  background-color: var(--table-row-hover-color);
 }
 
 @media (max-width: 768px) {
@@ -486,7 +490,7 @@ body .post-content table {
 
 /* Table Header */
 .post-content thead th {
-  background-color: #d46f93;
+  background-color: var(--table-header-color);
   font-weight: 800;
 }
 
@@ -542,7 +546,7 @@ body .post-content table {
 
 .writing-column {
   flex: 1;
-  background: #fdf1cd;
+  background: var(--writing-card-background);
   border-radius: 10px;
   padding: 1.5rem;
   min-width: 0;
@@ -552,7 +556,7 @@ body .post-content table {
   margin-bottom: 0.5rem;
   position: static;
   top: 0;
-  background: #fdf1cd;
+  background: var(--writing-card-background);
   text-align: center;
   z-index: 1;
 }
@@ -583,19 +587,19 @@ body .post-content table {
 }
 
 .writing-meta {
-  color: #666;
+  color: color-mix(in srgb, var(--text-color) 66%, transparent);
   margin-bottom: 0.25rem;
   display: flex;
   gap: 0.75rem;
 }
 
 .writing-tags {
-  color: #666;
+  color: color-mix(in srgb, var(--text-color) 66%, transparent);
 }
 
 .writing-excerpt {
   line-height: 1.5;
-  color: #444;
+  color: color-mix(in srgb, var(--text-color) 88%, transparent);
 }
 
 @media (max-width: 1200px) {
@@ -628,7 +632,7 @@ body .post-content table {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-color: #f9dc90;
+  background-color: var(--background-color);
   padding-left: 2rem;
   padding-right: 2rem;
   padding-bottom: 2rem;
@@ -681,7 +685,7 @@ body .post-content table {
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  background-color: #f9dc90;
+  background-color: var(--background-color);
   display: flex;
 
 }
@@ -731,7 +735,7 @@ body .post-content table {
 }
 
 .album-link.active {
-  color: #805690;
+  color: var(--links-color);
   font-weight: 700;
 }
 
@@ -772,7 +776,7 @@ body .post-content table {
 .site-footer {
   text-align: center;
   display: flex;
-  background-color: #f9dc90;
+  background-color: var(--background-color);
   padding: 1rem 1rem;
   box-sizing: border-box;
 }
@@ -790,7 +794,7 @@ body .post-content table {
 .footer-links a {
   opacity: 0.7;
   transition: background-size 0.3s ease;
-  color: #f9dc90;
+  color: var(--background-color);
   text-decoration: none;
   padding: 0.5rem;
   white-space: nowrap;
@@ -819,3 +823,41 @@ body .post-content table {
   }
 }
 
+/* Icons */
+.icon {
+  display: inline-block;
+  width: var(--icon-size);
+  height: var(--icon-size);
+  background-color: var(--text-color); 
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+}
+
+.github-icon {
+  mask-image: url('/icons/github.svg');
+  -webkit-mask-image: url('/icons/github.svg');
+}
+
+.email-icon {
+  mask-image: url('/icons/mail.svg');
+  -webkit-mask-image: url('/icons/mail.svg');
+}
+
+.linkedin-icon {
+  mask-image: url('/icons/linkedin.svg');
+  -webkit-mask-image: url('/icons/linkedin.svg');
+}
+
+.pinterest-icon {
+  mask-image: url('/icons/pinterest.svg');
+  -webkit-mask-image: url('/icons/pinterest.svg');
+}
+
+.cv-icon {
+  mask-image: url('/icons/file-text.svg');
+  -webkit-mask-image: url('/icons/file-text.svg');
+}
